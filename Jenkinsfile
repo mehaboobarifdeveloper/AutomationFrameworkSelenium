@@ -14,6 +14,14 @@ pipeline {
                 echo 'Testing..'
                 sh 'mvn clean test'
             }
+             post {
+                always {
+                    allure includeProperties:
+                     false,
+                     jdk: '',
+                     results: [[path: 'target/allure-results']]
+                }
+            }
         }
         stage('Results') {
             steps {
