@@ -12,8 +12,7 @@ pipeline {
         stage('Test') {
             steps {
                 echo 'Testing..'
-                sh 'xvfb-run mvn clean test'
-                sh 'mvn clean test -X'
+                sh 'mvn clean test'
             }
         }
         stage('Results') {
