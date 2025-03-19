@@ -12,7 +12,7 @@ pipeline {
         stage('Test') {
             steps {
                 echo 'Testing..'
-                sh 'export DISPLAY=:1.0'
+                sh 'export DISPLAY=:0'
                 sh 'mvn clean test'
             }
         }
