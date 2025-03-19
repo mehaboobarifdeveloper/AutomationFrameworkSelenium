@@ -12,7 +12,7 @@ pipeline {
         stage('Test') {
             steps {
                 echo 'Testing..'
-                sh 'sudo mvn clean test'
+                sh 'mvn clean test'
             }
         }
         stage('Results') {
